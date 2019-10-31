@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Book from "./components/Book";
+import Search from "./components/Search";
 
 // import propTypes from "prop-types";
 
@@ -60,24 +61,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="searchClass">
-          <input
-            className="search__input"
-            type="search"
-            placeholder={this.state.Query}
-            // onChange={this.handleText.bind(this)}
-            onChange={this.changeSearch.bind(this)}
+          <Search
+            SearchProps={this.changeSearch.bind(this)}
+            Placeholder={this.state.Query}
           />
-
-          {/* 
-          <div className="md-form form-lg">
-            <input
-              type="search"
-              id="inputLGEx"
-              className="form-control form-control-lg"
-              onChange={this.changeSearch.bind(this)}
-            />
-            <label htmlFor="inputLGEx">Find your book</label>
-          </div> */}
         </div>
 
         <Book Books={FilterBooks} />
