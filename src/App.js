@@ -13,7 +13,7 @@ class App extends Component {
       Books: [],
       Query: "javascript"
     };
-    console.log(this.state.Query);
+    // console.log(this.state.Query);
   }
 
   search = () => {
@@ -45,7 +45,7 @@ class App extends Component {
 
   render() {
     // const { Books } = this.state;
-    console.log(this.state.Query);
+    // console.log(this.state.Query);
 
     const { Books, Query } = this.state;
     // let bookJavascript = this.state.Query;
@@ -60,12 +60,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="searchClass">
-          <Search
-            SearchProps={this.changeSearch.bind(this)}
-            Placeholder={this.state.Query}
-          />
-        </div>
+
+        <Search
+          SearchProps={this.changeSearch.bind(this)}
+          Placeholder={this.state.Query}
+        />
 
         <Book Books={FilterBooks} />
       </div>
