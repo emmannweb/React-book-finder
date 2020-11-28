@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-###deploy link: https://emmannweb.github.io/github-user-finder/
+### deploy link: https://emmannweb.github.io/github-user-finder/
 
 In the project directory, you can run:
 
